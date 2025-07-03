@@ -16,6 +16,4 @@ public class IpAndPathKeyResolver {
             return Mono.just(ip + ":" + path);
         };
     }
-
-
 }

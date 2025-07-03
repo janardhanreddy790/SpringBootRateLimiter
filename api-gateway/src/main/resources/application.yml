@@ -20,7 +20,6 @@ spring:
             redis-rate-limiter.replenishRate: 5
             redis-rate-limiter.burstCapacity: 50
             key-resolver: "#{@customRateKeyResolver}"
-
       routes:
         - id: service-hello
           uri: http://localhost:8081
