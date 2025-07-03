@@ -8,12 +8,14 @@ import reactor.core.publisher.Mono;
 @Configuration
 public class IpAndPathKeyResolver {
 
-    @Bean
-    public KeyResolver ipAndPathKeyResolver() {
+    @Bean(name = "customRateKeyResolver")
+    public KeyResolver customRateKeyResolver() {
         return exchange -> {
             String ip = exchange.getRequest().getRemoteAddress().getAddress().getHostAddress();
             String path = exchange.getRequest().getPath().toString();
             return Mono.just(ip + ":" + path);
         };
     }
+
+
 }

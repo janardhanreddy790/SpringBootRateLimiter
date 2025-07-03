@@ -4,3 +4,5 @@ server:
 spring:
   application:
     name: service-hello
+  main:
+    web-application-type: reactive
